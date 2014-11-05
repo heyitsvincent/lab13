@@ -75,6 +75,39 @@ class MyApp:
 	    
 	      	
 #moving things
+circle = drawpad.create_oval(100,500,120,400,fill='green')     	  	  
+direction = 1
+def animation():
+    global direction
+    x1,y1,x2,y2 = drawpad.coords(circle)
+    if x2 > drawpad.winfo_width():
+        direction=-1 
+    drawpad.move(circle,direction,0)
+    drawpad.after(5, animation)
+animation()
 	      	  	  	
+circle2 = drawpad.create_oval(150,300,100,200,fill='green')     	  	  
+direction = 1
+def animation2():
+    global direction
+    x1,y1,x2,y2 = drawpad.coords(circle2)
+    if x2 > drawpad.winfo_width():
+        direction=-1 
+    drawpad.move(circle2,direction,0)
+    drawpad.after(5, animation2)
+animation2()
+
+circle3 = drawpad.create_oval(200,400,160,300,fill='green')     	  	  
+direction = 1
+def animation3():
+    global direction
+    x1,y1,x2,y2 = drawpad.coords(circle3)
+    if x2 > drawpad.winfo_width():
+        direction=-1 
+    drawpad.move(circle3,direction,0)
+    drawpad.after(5, animation3)
+animation3()		
+	      	  	  			
+	      	  	  					
 app = MyApp(root)
 root.mainloop()
