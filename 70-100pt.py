@@ -71,6 +71,10 @@ class MyApp:
 	def downClicked(self, event):
 	    global oval 
 	    global player
-	    drawpad.move(player,0,20)	  	
+	    drawpad.move(player,0,20)	
+	    
+	      	
+#moving things
+	      	  	  	
 app = MyApp(root)
 root.mainloop()
